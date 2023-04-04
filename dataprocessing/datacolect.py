@@ -1,6 +1,6 @@
 from time import sleep
 from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -134,6 +134,20 @@ class Scrape:
             EC.presence_of_element_located((how, path))
         )
         return elements.find_elements(how, path)
+
+    def elements_text(self, elements: list):
+        """""""""
+        Shows texts obtained from elements of BeautifulSoup's selenium.webdriver or soup objects.
+        * elements: element list selenium.webdriver or BeautifulSoup objects.
+        """""""""
+        try:
+            for index, element in enumerate(elements):
+                if isinstance(element, WebElement):
+                    print(f'{index}: {element.text}')
+                else:
+                    print(f'{index}: {element.get_text()}')
+        except:
+            raise 'The passed elements do not contain texts.'
     
     def switch_tab(self, tab: int, timeout: int = 5):
         """""""""
@@ -144,21 +158,19 @@ class Scrape:
         self.webdriver.switch_to.window(self.webdriver.window_handles[tab])
         sleep(timeout)
     
-    def info_iterator(self, infos):
+    def select_elements(self, elements: list, index: list):
         """""""""
         Iterates the selenium webdriver objects to get the data.
         * infos: list with selenium webdriver objects.
         """""""""
-        infos_list = list()
+        only_selected_elements = list()
+
+        for element_index, element in enumerate(elements):
+            if element_index in index:
+                only_selected_elements.append(element)
         
-        if infos == None:
-            infos_list = None
-        else:
-            for info in infos:
-                info = info.text
-                infos_list.append(info)
-            
-        return infos_list
+        return only_selected_elements
+
 
 
 
