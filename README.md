@@ -1,10 +1,10 @@
 # *Clustering* dos municípios cearenses - Eleições 2022
 
-## Objetivo do projeto
+## **Objetivo do projeto**
 
 Obter e extrair dados a fim de analisar (dados da votação, mas também de votação por indicadores socioeconômicos) e *clusterizar* os municípios cearenses com base na proporção de votos nos **principais candidatos aos cargos de: governador, senador e presidente (1º e 2º turno).**
 
-## Etapas do projeto
+## **Etapas do projeto**
 
 ### Obtenção de extração dos dados:
 
@@ -25,5 +25,14 @@ Assim como análises mais focadas nos cargos disputados. A visualização de dad
 
 ![image](https://github.com/DamodaraBarbosa/clustering_municipios_eleicoes_2022_ceara/assets/107199898/b5121ce3-4502-45a5-8cdd-d3820ad61278)
 
-### *Clustering* dos municípios cearenses:
+### *Clustering* dos municípios cearenses e análise de seus perfis:
 
+A modelagem foi feita utilizando o algoritmo *KMeans* e teve como base a proporção de votos válidos para os principais candidatos que disputaram os cargos de governador e senador do estado, além de presidente (3 candidatos para o 1º turno e 2 candidatos no 2º turno). No estado do Ceará não houve disputa no 2º turno para governador.
+
+![image](https://github.com/DamodaraBarbosa/clustering_municipios_eleicoes_2022_ceara/assets/107199898/d84cf9f7-bbbb-42ee-933d-6fe93d4a36c4)
+
+Ademais, após a definição dos *clusters* foi feita a **análise do perfil eleitoral de cada um deles.**
+
+## **Como executá-lo?**
+
+A pasta `dataprocessing` contém o pacote com as classes utilizadas para coletar, extrair e 
