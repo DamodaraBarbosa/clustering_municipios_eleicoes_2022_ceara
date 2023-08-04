@@ -15,4 +15,15 @@ Os dados de resumo de alguns indicadores socioeconômicos do IBGE foram extraíd
 
 ### Extração e tratamento dos dados:
 
-Os obtidos do TSE são compactados, sendo necessária a sua descompactação.
+Os obtidos do TSE são compactados, sendo necessária a sua descompactação. Para isso, uma classe **Extract** foi instanciada com base na biblioteca `zipfile`. Ambos os dados (eleição e IBGE) foram tratados para que estivessem num formato mais pronto para as análises posteriores e *clusterização*.
+
+### Análise dos dados:
+
+Para obter diferentes *insights*, foram feitas diversas análises. Tanto de um panorama mais geral para entender o número de zonas e seções eleitorais, e as cidades com o maior número destas, mas também a contribuição de votos de cada município para eleição no estado.
+
+Assim como análises mais focadas nos cargos disputados. A visualização de dados foi feita utilizando a biblioteca `plotly`. Também foi feito o uso da biblioteca `geobr` a fim de obter dados geoespaciais.
+
+![image](https://github.com/DamodaraBarbosa/clustering_municipios_eleicoes_2022_ceara/assets/107199898/b5121ce3-4502-45a5-8cdd-d3820ad61278)
+
+### *Clustering* dos municípios cearenses:
+
