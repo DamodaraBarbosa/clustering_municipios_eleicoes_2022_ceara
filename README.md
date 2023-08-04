@@ -35,4 +35,10 @@ Ademais, após a definição dos *clusters* foi feita a **análise do perfil ele
 
 ## **Como executá-lo?**
 
-A pasta `dataprocessing` contém o pacote com as classes utilizadas para coletar, extrair e 
+A pasta `dataprocessing` contém o pacote com as classes utilizadas para coletar, extrair e baixar os dados. O código está documentado.
+Além disso, o arquivo `requirements.txt` contém as versões da ferramentas utilizadas no projeto.
+
+## Desenvolvido por
+
+Damodara Barbosa, Cientista de Dados e Instrutor de Ciência de Dados
+LinkedIn: https://www.linkedin.com/in/damodarabarbosa/
